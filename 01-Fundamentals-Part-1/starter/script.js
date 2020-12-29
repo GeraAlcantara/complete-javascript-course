@@ -65,7 +65,7 @@ const BMIJohn = massJohn / heightJohn ** 2;
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI) */
 
-const firstName = 'Gerardo';
+/* const firstName = 'Gerardo';
 const job = 'Senior Developer';
 const birthYear = 1979;
 const year = 2037;
@@ -74,4 +74,16 @@ const gera = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + 
 console.log(gera);
 
 const geraNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}! `;
-console.log(geraNew);
+console.log(geraNew); */
+
+/* console.log(`multy
+line with out  
+need to break `); */
+
+const age = 13;
+
+if (age >= 18) {
+  console.log(`Mariana can start her driving licence 🚗`);
+} else {
+  console.log(`Mariana can not start her driving licence, she need to take the 🚌`);
+}
