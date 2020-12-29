@@ -55,7 +55,7 @@ const massJohn = 92;
 const heightJohn = 1.95; */
 
 // DATA 2
-const massMark = 95;
+/* const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
 const heightJohn = 1.76;
@@ -63,4 +63,15 @@ const heightJohn = 1.76;
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / heightJohn ** 2;
 const markHigherBMI = BMIMark > BMIJohn;
-console.log(BMIMark, BMIJohn, markHigherBMI);
+console.log(BMIMark, BMIJohn, markHigherBMI) */
+
+const firstName = 'Gerardo';
+const job = 'Senior Developer';
+const birthYear = 1979;
+const year = 2037;
+
+const gera = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(gera);
+
+const geraNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}! `;
+console.log(geraNew);
