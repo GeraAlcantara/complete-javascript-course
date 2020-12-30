@@ -80,7 +80,7 @@ console.log(geraNew); */
 line with out  
 need to break `); */
 
-const age = 13;
+/* const age = 13;
 
 if (age >= 18) {
   console.log(`Mariana can start her driving licence 🚗`);
@@ -97,4 +97,26 @@ if (birthYear <= 2000) {
   century = 21;
 }
 
-console.log(century);
+console.log(century); */
+
+/* const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95; */
+
+// DATA 2
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / heightJohn ** 2;
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI);
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})! `);
+} else {
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})! `);
+}
