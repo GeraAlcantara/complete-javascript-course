@@ -81,15 +81,15 @@ console.log(yearsUntilRetirement(1922, 'Chepina'));
 
 const calcAverage = (a, b, c) => a + b + c / 3;
 
-const avgDolhins = calcAverage(85, 54, 41);
-const avgKoalas = calcAverage(23, 34, 27);
+const scoreDolhins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
 function checkWinner(avgDolhins, avgKoalas) {
   if (avgDolhins >= 2 * avgKoalas || avgKoalas >= 2 * avgDolhins) {
     if (avgDolhins >= avgKoalas) {
-      console.log(`Dolphins win (${avgDolhins} vs ${avgKoalas} ) `);
+      console.log(`Dolphins win 🏆 (${avgDolhins} vs ${avgKoalas} ) `);
     } else {
-      console.log(`Koala win (${avgKoalas} vs ${avgDolhins} ) `);
+      console.log(`Koala win  🏆(${avgKoalas} vs ${avgDolhins} ) `);
     }
   } else console.log(`no one wins`);
 }
-checkWinner(avgDolhins, avgKoalas);
+checkWinner(scoreDolhins, scoreKoalas);
