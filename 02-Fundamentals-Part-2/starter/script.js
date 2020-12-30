@@ -79,7 +79,7 @@ console.log(yearsUntilRetirement(1997, 'Gerardo'));
 console.log(yearsUntilRetirement(1922, 'Chepina'));
  */
 
-const calcAverage = (a, b, c) => a + b + c / 3;
+/* const calcAverage = (a, b, c) => a + b + c / 3;
 
 const scoreDolhins = calcAverage(85, 54, 41);
 const scoreKoalas = calcAverage(23, 34, 27);
@@ -92,4 +92,15 @@ function checkWinner(avgDolhins, avgKoalas) {
     }
   } else console.log(`no one wins`);
 }
-checkWinner(scoreDolhins, scoreKoalas);
+checkWinner(scoreDolhins, scoreKoalas); */
+
+const friends = ['Michael', 'Steve', 'Peter'];
+console.log(friends);
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay';
+console.log(friends);
+friends.push('23');
+console.log(friends);
