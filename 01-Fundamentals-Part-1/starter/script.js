@@ -87,3 +87,14 @@ if (age >= 18) {
 } else {
   console.log(`Mariana can not start her driving licence, she need to take the 🚌`);
 }
+
+const birthYear = 1999;
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
