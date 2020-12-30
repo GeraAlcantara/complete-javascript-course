@@ -181,16 +181,13 @@ Test data:
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK */
 
-const scoreDolphines = 106 + 109 + 95;
-const scoreKoalas = 109 + 95 + 106;
+const scoreDolphines = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 106) / 3;
 
-const averageDolphines = scoreDolphines / 3;
-const averageKoalas = scoreKoalas / 3;
-
-if (averageDolphines > 100 || averageKoalas > 100) {
-  if (averageDolphines === averageKoalas) {
+if (scoreDolphines >= 100 || scoreKoalas >= 100) {
+  if (scoreDolphines === scoreKoalas) {
     console.log('Es un empate');
-  } else if (averageDolphines > averageKoalas) {
+  } else if (scoreDolphines > scoreKoalas) {
     console.log('Dolphines wins');
   } else {
     console.log('Koalas wins!');
