@@ -79,9 +79,7 @@ console.log(yearsUntilRetirement(1997, 'Gerardo'));
 console.log(yearsUntilRetirement(1922, 'Chepina'));
  */
 
-const calcAverage = (a, b, c) => {
-  return score1 + score2 + score3 / 3;
-};
+const calcAverage = (a, b, c) => a + b + c / 3;
 
 const avgDolhins = calcAverage(85, 54, 41);
 const avgKoalas = calcAverage(23, 34, 27);
