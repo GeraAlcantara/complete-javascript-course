@@ -197,7 +197,7 @@ if (scoreDolphines >= 100 || scoreKoalas >= 100) {
 } */
 
 // switch statment
-const day = 'frida';
+/* const day = 'frida';
 
 switch (day) {
   case 'monday':
@@ -236,4 +236,11 @@ if (day === 'monday') {
   console.log(`enjoy the weekend 😁`);
 } else {
   console.log(`No valid day!`);
-}
+} */
+
+const age = 12;
+
+age >= 18 ? console.log(`I like to drink wine 🍷`) : console.log(`I like to drink water 💧`);
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+console.log(drink);
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'} `);
