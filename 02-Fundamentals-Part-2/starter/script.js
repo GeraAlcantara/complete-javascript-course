@@ -1,11 +1,4 @@
-'use strict' /* console.log(friends);
-friends.shift();
-console.log(friends);
-
-console.log(friends.indexOf('Steve'));
-console.log(friends.includes('Steve')); */; // remove las element
-
-/* let hasDriverLicense = false;
+'use strict' /* let hasDriverLicense = false;
 
 const passTest = true;
 
@@ -49,9 +42,7 @@ console.log(age1, age2);
 
 const calcAge3 = (birthyear) => 2037 - birthyear;
 const age3 = calcAge3(1991);
-console.log(age3); */
-
-/* function cutFruitPieces(fruit) {
+console.log(age3); */ /* function cutFruitPieces(fruit) {
   return fruit * 4;
 }
 
@@ -63,9 +54,7 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 
-console.log(fruitProcessor(2, 3)); */
-
-/* const calcAge = function (birthyear) {
+console.log(fruitProcessor(2, 3)); */ /* const calcAge = function (birthyear) {
   return 2021 - birthyear;
 };
 
@@ -82,9 +71,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 };
 console.log(yearsUntilRetirement(1997, 'Gerardo'));
 console.log(yearsUntilRetirement(1922, 'Chepina'));
- */
-
-/* const calcAverage = (a, b, c) => a + b + c / 3;
+ */ /* const calcAverage = (a, b, c) => a + b + c / 3;
 
 const scoreDolhins = calcAverage(85, 54, 41);
 const scoreKoalas = calcAverage(23, 34, 27);
@@ -97,9 +84,13 @@ function checkWinner(avgDolhins, avgKoalas) {
     }
   } else console.log(`no one wins`);
 }
-checkWinner(scoreDolhins, scoreKoalas); */
+checkWinner(scoreDolhins, scoreKoalas); */; // remove las element
+/* console.log(friends);
+friends.shift();
+console.log(friends);
 
-/* const friends = ['Michael', 'Steve', 'Peter'];
+console.log(friends.indexOf('Steve'));
+console.log(friends.includes('Steve')); */ /* const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
 console.log(friends[0]);
 console.log(friends.length);
@@ -216,7 +207,7 @@ higherBMI(john, mark); */
 }
  */
 
-const gera = {
+/* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   age: 2037 - 2012,
@@ -226,4 +217,18 @@ const gera = {
 for (let i = 0; i < gera.friends.length; i++) {
   const el = gera.friends[i];
   console.log(` gera frined ${el} number ${i + 1} `);
+} */
+
+const gera = ['Gerardo', 'Alcántara', 46, 'Senior Developer', ['Michael', ' Peter', 'Steven']];
+
+for (let i = gera.length - 1; i >= 0; i--) {
+  const el = gera[i];
+  console.log(i, el);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------------Starting excercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep} 🏋️ `);
+  }
 }
