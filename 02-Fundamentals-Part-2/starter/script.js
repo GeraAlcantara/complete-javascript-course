@@ -1,4 +1,9 @@
-'use strict';
+'use strict' /* console.log(friends);
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steve'));
+console.log(friends.includes('Steve')); */; // remove las element
 
 /* let hasDriverLicense = false;
 
@@ -105,16 +110,29 @@ console.log(friends);
 friends.push('23');
 console.log(friends); */
 
-const friends = ['Michael', 'Steve', 'Peter'];
+/* const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
 friends.push('Jay');
 console.log(friends);
 friends.unshift('John');
-console.log(friends);
-friends.pop(); // remove las element
-console.log(friends);
-friends.shift();
-console.log(friends);
+console.log(friends); */
+/* friends.pop();  */ const bills = [125, 555, 44];
+const total = [];
 
-console.log(friends.indexOf('Steve'));
-console.log(friends.includes('Steve'));
+function calctip(bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else {
+    return bill * 0.2;
+  }
+}
+
+function updateTotal(billPlusTip) {
+  total.push(billPlusTip);
+}
+
+for (let index = 0; index < bills.length; index++) {
+  const bill = bills[index];
+  updateTotal(calctip(bill));
+  console.log(calctip(bill), total);
+}
