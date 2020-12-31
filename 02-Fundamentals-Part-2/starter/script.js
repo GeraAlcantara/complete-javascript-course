@@ -137,7 +137,7 @@ for (let index = 0; index < bills.length; index++) {
 
 // Objects
 
-const gera = {
+/* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   age: 2037 - 2012,
@@ -149,8 +149,27 @@ console.log(gera);
 console.log(gera.lastName);
 const nameKey = 'Name';
 console.log(gera['first' + nameKey]);
-console.log(gera['last' + nameKey]);
+console.log(gera['last' + nameKey]); */
 /* const interesteIn = prompt('what you what to now');
 console.log(gera[interesteInjob]); */
 
-console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `);
+/* console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `); */
+
+const gera = {
+  firstName: 'Gerardo',
+  lastName: 'Alcántara',
+  birthYear: 1991,
+  job: 'Senior Developer',
+  friends: ['Michael', ' Peter', 'Steven'],
+  hasDriverLicense: true,
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license `;
+  },
+};
+
+console.log(gera.getSummary());
+gera.firstName = 'Sam';
