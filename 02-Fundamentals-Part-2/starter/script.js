@@ -116,16 +116,14 @@ friends.push('Jay');
 console.log(friends);
 friends.unshift('John');
 console.log(friends); */
-/* friends.pop();  */ const bills = [125, 555, 44];
+/* friends.pop();  */
+
+const bills = [125, 555, 44];
 const total = [];
 
-function calctip(bill) {
-  if (bill >= 50 && bill <= 300) {
-    return bill * 0.15;
-  } else {
-    return bill * 0.2;
-  }
-}
+const calctip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
 
 function updateTotal(billPlusTip) {
   total.push(billPlusTip);
