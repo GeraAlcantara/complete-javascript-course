@@ -94,7 +94,7 @@ function checkWinner(avgDolhins, avgKoalas) {
 }
 checkWinner(scoreDolhins, scoreKoalas); */
 
-const friends = ['Michael', 'Steve', 'Peter'];
+/* const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
 console.log(friends[0]);
 console.log(friends.length);
@@ -103,4 +103,18 @@ console.log(friends[friends.length - 1]);
 friends[2] = 'Jay';
 console.log(friends);
 friends.push('23');
+console.log(friends); */
+
+const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
+friends.push('Jay');
+console.log(friends);
+friends.unshift('John');
+console.log(friends);
+friends.pop(); // remove las element
+console.log(friends);
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steve'));
+console.log(friends.includes('Steve'));
