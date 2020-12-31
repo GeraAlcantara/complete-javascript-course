@@ -118,19 +118,39 @@ friends.unshift('John');
 console.log(friends); */
 /* friends.pop();  */
 
-const bills = [125, 555, 44];
+/* const bills = [125, 555, 44];
 const total = [];
 
 const calctip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 
-function updateTotal(billPlusTip) {
+const updateTotal = function (billPlusTip) {
   total.push(billPlusTip);
-}
+};
 
 for (let index = 0; index < bills.length; index++) {
   const bill = bills[index];
   updateTotal(calctip(bill));
   console.log(calctip(bill), total);
-}
+} */
+
+// Objects
+
+const gera = {
+  firstName: 'Gerardo',
+  lastName: 'Alcántara',
+  age: 2037 - 2012,
+  job: 'Senior Developer',
+  friends: ['Michael', ' Peter', 'Steven'],
+};
+
+console.log(gera);
+console.log(gera.lastName);
+const nameKey = 'Name';
+console.log(gera['first' + nameKey]);
+console.log(gera['last' + nameKey]);
+/* const interesteIn = prompt('what you what to now');
+console.log(gera[interesteInjob]); */
+
+console.log(` Gera has ${gera.friends.length} and his best friend is ${gera.friends[0]} `);
