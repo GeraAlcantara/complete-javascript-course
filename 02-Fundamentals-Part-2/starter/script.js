@@ -153,4 +153,4 @@ console.log(gera['last' + nameKey]);
 /* const interesteIn = prompt('what you what to now');
 console.log(gera[interesteInjob]); */
 
-console.log(` Gera has ${gera.friends.length} and his best friend is ${gera.friends[0]} `);
+console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `);
