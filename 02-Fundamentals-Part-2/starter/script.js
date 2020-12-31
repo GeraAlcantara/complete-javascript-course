@@ -84,13 +84,7 @@ function checkWinner(avgDolhins, avgKoalas) {
     }
   } else console.log(`no one wins`);
 }
-checkWinner(scoreDolhins, scoreKoalas); */; // remove las element
-/* console.log(friends);
-friends.shift();
-console.log(friends);
-
-console.log(friends.indexOf('Steve'));
-console.log(friends.includes('Steve')); */ /* const friends = ['Michael', 'Steve', 'Peter'];
+checkWinner(scoreDolhins, scoreKoalas); */ /* const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
 console.log(friends[0]);
 console.log(friends.length);
@@ -99,17 +93,12 @@ console.log(friends[friends.length - 1]);
 friends[2] = 'Jay';
 console.log(friends);
 friends.push('23');
-console.log(friends); */
-
-/* const friends = ['Michael', 'Steve', 'Peter'];
+console.log(friends); */ /* const friends = ['Michael', 'Steve', 'Peter'];
 console.log(friends);
 friends.push('Jay');
 console.log(friends);
 friends.unshift('John');
-console.log(friends); */
-/* friends.pop();  */
-
-/* const bills = [125, 555, 44];
+console.log(friends); */ /* friends.pop();  */ /* const bills = [125, 555, 44];
 const total = [];
 
 const calctip = function (bill) {
@@ -124,11 +113,7 @@ for (let index = 0; index < bills.length; index++) {
   const bill = bills[index];
   updateTotal(calctip(bill));
   console.log(calctip(bill), total);
-} */
-
-// Objects
-
-/* const gera = {
+} */ /* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   age: 2037 - 2012,
@@ -140,13 +125,8 @@ console.log(gera);
 console.log(gera.lastName);
 const nameKey = 'Name';
 console.log(gera['first' + nameKey]);
-console.log(gera['last' + nameKey]); */
-/* const interesteIn = prompt('what you what to now');
-console.log(gera[interesteInjob]); */
-
-/* console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `); */
-
-/* const gera = {
+console.log(gera['last' + nameKey]); */ /* const interesteIn = prompt('what you what to now');
+console.log(gera[interesteInjob]); */ /* console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `); */ /* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   birthYear: 1991,
@@ -162,9 +142,7 @@ console.log(gera[interesteInjob]); */
   },
 };
 
-console.log(gera.getSummary()); */
-
-/* const mark = {
+console.log(gera.getSummary()); */ /* const mark = {
   firstName: 'Mark',
   lastName: 'Miller',
   weight: 78,
@@ -200,14 +178,10 @@ const higherBMI = function (person1, person2) {
   }
 };
 
-higherBMI(john, mark); */
-
-/* for (let i = 1; i <= 10; i++) {
+higherBMI(john, mark); */ /* for (let i = 1; i <= 10; i++) {
   console.log(`Lifting weight repetition ${i} 🏋️`);
 }
- */
-
-/* const gera = {
+ */ /* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   age: 2037 - 2012,
@@ -217,9 +191,13 @@ higherBMI(john, mark); */
 for (let i = 0; i < gera.friends.length; i++) {
   const el = gera.friends[i];
   console.log(` gera frined ${el} number ${i + 1} `);
-} */
+} */; // remove las element // Objects
+/* console.log(friends);
+friends.shift();
+console.log(friends);
 
-const gera = ['Gerardo', 'Alcántara', 46, 'Senior Developer', ['Michael', ' Peter', 'Steven']];
+console.log(friends.indexOf('Steve'));
+console.log(friends.includes('Steve')); */ /* const gera = ['Gerardo', 'Alcántara', 46, 'Senior Developer', ['Michael', ' Peter', 'Steven']];
 
 for (let i = gera.length - 1; i >= 0; i--) {
   const el = gera[i];
@@ -231,4 +209,20 @@ for (let exercise = 1; exercise < 4; exercise++) {
   for (let rep = 1; rep < 6; rep++) {
     console.log(`Lifting weight repetition ${rep} 🏋️ `);
   }
+} */
+
+/* for (let i = 1; i <= 10; i++) {
+  console.log(`Lifting weight repetition ${i} 🏋️`);
+} */
+
+/* let rep = 1;
+while (rep <= 10) {
+  console.log(`Lifting weight repetition ${rep} 🏋️`);
+  rep++;
+} */
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice} `);
+  dice = Math.trunc(Math.random() * 6) + 1;
 }
