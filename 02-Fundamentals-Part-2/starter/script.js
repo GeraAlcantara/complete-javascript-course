@@ -191,13 +191,7 @@ higherBMI(john, mark); */ /* for (let i = 1; i <= 10; i++) {
 for (let i = 0; i < gera.friends.length; i++) {
   const el = gera.friends[i];
   console.log(` gera frined ${el} number ${i + 1} `);
-} */; // remove las element // Objects
-/* console.log(friends);
-friends.shift();
-console.log(friends);
-
-console.log(friends.indexOf('Steve'));
-console.log(friends.includes('Steve')); */ /* const gera = ['Gerardo', 'Alcántara', 46, 'Senior Developer', ['Michael', ' Peter', 'Steven']];
+} */ /* const gera = ['Gerardo', 'Alcántara', 46, 'Senior Developer', ['Michael', ' Peter', 'Steven']];
 
 for (let i = gera.length - 1; i >= 0; i--) {
   const el = gera[i];
@@ -209,7 +203,13 @@ for (let exercise = 1; exercise < 4; exercise++) {
   for (let rep = 1; rep < 6; rep++) {
     console.log(`Lifting weight repetition ${rep} 🏋️ `);
   }
-} */
+} */; // remove las element // Objects
+/* console.log(friends);
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steve'));
+console.log(friends.includes('Steve')); */
 
 /* for (let i = 1; i <= 10; i++) {
   console.log(`Lifting weight repetition ${i} 🏋️`);
@@ -220,9 +220,9 @@ while (rep <= 10) {
   console.log(`Lifting weight repetition ${rep} 🏋️`);
   rep++;
 } */
-let dice = Math.trunc(Math.random() * 6) + 1;
+/* let dice = Math.trunc(Math.random() * 6) + 1;
 
 while (dice !== 6) {
   console.log(`You rolled a ${dice} `);
   dice = Math.trunc(Math.random() * 6) + 1;
-}
+} */
