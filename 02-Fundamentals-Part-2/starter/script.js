@@ -155,7 +155,7 @@ console.log(gera[interesteInjob]); */
 
 /* console.log(` ${gera.firstName} has ${gera.friends.length} and his best friend is ${gera.friends[0]} `); */
 
-const gera = {
+/* const gera = {
   firstName: 'Gerardo',
   lastName: 'Alcántara',
   birthYear: 1991,
@@ -171,5 +171,42 @@ const gera = {
   },
 };
 
-console.log(gera.getSummary());
-gera.firstName = 'Sam';
+console.log(gera.getSummary()); */
+
+const mark = {
+  firstName: 'Mark',
+  lastName: 'Miller',
+  weight: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.BMI = this.weight / this.height;
+    return this.BMI;
+  },
+};
+
+const john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  weight: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.BMI = this.weight / this.height;
+    return this.BMI;
+  },
+};
+john.calcBMI();
+mark.calcBMI();
+
+const higherBMI = function (person1, person2) {
+  if (person1.BMI > person2.BMI) {
+    console.log(
+      `${person1.firstName} ${person1.lastName} BMI ${person1.BMI} is higher than ${person2.firstName} ${person2.lastName} ${person2.BMI} `
+    );
+  } else {
+    console.log(
+      `${person2.firstName} ${person2.lastName} BMI ${person2.BMI} is higher than ${person1.firstName} ${person1.lastName} ${person1.BMI} `
+    );
+  }
+};
+
+higherBMI(john, mark);
