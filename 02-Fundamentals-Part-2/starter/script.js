@@ -173,14 +173,14 @@ console.log(gera[interesteInjob]); */
 
 console.log(gera.getSummary()); */
 
-const mark = {
+/* const mark = {
   firstName: 'Mark',
   lastName: 'Miller',
   weight: 78,
   height: 1.69,
   calcBMI: function () {
-    this.BMI = this.weight / this.height;
-    return this.BMI;
+    this.bmi = this.weight / this.height;
+    return this.bmi;
   },
 };
 
@@ -190,23 +190,40 @@ const john = {
   weight: 92,
   height: 1.95,
   calcBMI: function () {
-    this.BMI = this.weight / this.height;
-    return this.BMI;
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
   },
 };
 john.calcBMI();
 mark.calcBMI();
 
 const higherBMI = function (person1, person2) {
-  if (person1.BMI > person2.BMI) {
+  if (person1.bmi > person2.bmi) {
     console.log(
-      `${person1.firstName} ${person1.lastName} BMI ${person1.BMI} is higher than ${person2.firstName} ${person2.lastName} ${person2.BMI} `
+      `${person1.firstName} ${person1.lastName} BMI (${person1.bmi}) is higher than ${person2.firstName} ${person2.lastName} (${person2.bmi}) `
     );
   } else {
     console.log(
-      `${person2.firstName} ${person2.lastName} BMI ${person2.BMI} is higher than ${person1.firstName} ${person1.lastName} ${person1.BMI} `
+      `${person2.firstName} ${person2.lastName} BMI (${person2.bmi}) is higher than ${person1.firstName} ${person1.lastName} (${person1.bmi}) `
     );
   }
 };
 
-higherBMI(john, mark);
+higherBMI(john, mark); */
+
+/* for (let i = 1; i <= 10; i++) {
+  console.log(`Lifting weight repetition ${i} 🏋️`);
+}
+ */
+
+const gera = {
+  firstName: 'Gerardo',
+  lastName: 'Alcántara',
+  age: 2037 - 2012,
+  job: 'Senior Developer',
+  friends: ['Michael', ' Peter', 'Steven'],
+};
+for (let i = 0; i < gera.friends.length; i++) {
+  const el = gera.friends[i];
+  console.log(` gera frined ${el} number ${i + 1} `);
+}
