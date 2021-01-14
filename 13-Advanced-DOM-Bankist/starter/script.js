@@ -183,12 +183,11 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  // section.classList.add('section--hidden');
 });
 
 //Lazy loading images
 const imgTarget = document.querySelectorAll('img[data-src]');
-console.log(imgTarget);
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
@@ -204,8 +203,95 @@ const loadImg = function (entries, observer) {
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
+  rootMargin: '200px',
 });
 imgTarget.forEach(img => imgObserver.observe(img));
+
+// Slider
+
+const slider = () => {
+  const slides = document.querySelectorAll('.slide');
+  const slider = document.querySelector('.slider');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+  const dotContainer = document.querySelector('.dots');
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const initSlider = () => {
+    createDots();
+    goToSlide(0);
+    activateDot(0);
+  };
+
+  initSlider();
+
+  // Events handlers
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+  //curSlide = 1, -100%, 0%, 100%, 200%
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    // if 1°  is true && will return the 2° as ong is true aswell
+    e.key === 'ArrowRight' && nextSlide();
+  });
+
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+};
+// Start Slider
+slider();
+
 //
 //Selecting elements
 // console.log(document.documentElement);
@@ -357,3 +443,16 @@ imgTarget.forEach(img => imgObserver.observe(img));
 // [...h1.parentElement.children].forEach(function (el) {
 //   if (el !== h1) el.style.transform = 'scale(0.5)';
 // });
+document.addEventListener('DOMContentLoaded', function (e) {
+  console.log('HTML parse and DOM tree Build');
+});
+
+window.addEventListener('load', e => {
+  console.log(e);
+  console.log('Page fully loaded');
+});
+/* window.addEventListener('beforeunload', function (e) {
+  e.preventDefault();
+  console.log(e);
+  e.returnValue = '';
+}); */
