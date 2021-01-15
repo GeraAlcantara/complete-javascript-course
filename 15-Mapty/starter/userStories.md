@@ -15,3 +15,43 @@
 4. I want to see my workouts on a map
 
 5. see all my workouts when I leave the app and comeback later, so that I can keep using the app over time
+
+---
+
+## Features
+
+- [ ] Map
+- [ ] GeoLocation
+- [ ] Form input running data
+- [ ] Form input cycling data
+- [ ] Display workout List
+- [ ] Display workout in the map
+- [ ] Store workouts
+- [ ] On page load restore store data workouts
+
+## Flowchart
+
+### Page Load
+
+- async Get current location coordinates
+- Render map on current Location
+- User click on map
+- Render workout Form
+- User submits new work out
+  - render workout on map
+  - render workout on list
+  - Store work out
+
+### Page Load with Storage Data
+
+- Load workouts from storage
+  - render workout on map
+  - render workout on list
+  - async Get current location coordinates
+- Render map on current Location
+- User click on map
+- Render workout Form
+- User submits new work out
+  - render workout on map
+  - render workout on list
+  - Store work out
