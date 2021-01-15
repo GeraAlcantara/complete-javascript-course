@@ -1,6 +1,7 @@
 # User Stories
 
-**User Story**: description of the application funcionality from the user's prespective
+**User Story**: description of the application funcionality from the user's prespective.
+
 **Common Format**: As **[type of user]**, I want **[an action]** so that **[a benefit]**
 
 1. I want to log my running workouts with location, distance, pace and steps/minute
