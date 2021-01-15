@@ -4,6 +4,8 @@
 
 **Common Format**: As **[type of user]**, I want **[an action]** so that **[a benefit]**
 
+---
+
 1. I want to log my running workouts with location, distance, pace and steps/minute
 
 2. log my cycling workouts with location, distance, time, speed and elevation
