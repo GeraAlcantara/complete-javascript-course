@@ -367,7 +367,7 @@ const whereAmI = async function () {
   .catch(err => console.error(`2: ${err.message}`))
   .finally(() => console.log(`3: Finish getting location`)); */
 
-(async function () {
+/* (async function () {
   try {
     const city = await whereAmI();
     console.log(`2: ${city}`);
@@ -375,7 +375,7 @@ const whereAmI = async function () {
     console.error(`2: ${err.message}`);
   }
   console.log('3:');
-})();
+})(); */
 
 console.log('1: ');
 const getJson = function (url, errorMsg = 'Something went wrong') {
@@ -384,17 +384,17 @@ const getJson = function (url, errorMsg = 'Something went wrong') {
     return res.json();
   });
 };
-const get3Countrys = async function (c1, c2, c3) {
+/* const get3Countrys = async function (c1, c2, c3) {
   try {
-    /* const [data1] = await getJson(
-      `https://restcountries.eu/rest/v2/name/${c1}`
-    );
-    const [data2] = await getJson(
-      `https://restcountries.eu/rest/v2/name/${c2}`
-    );
-    const [data3] = await getJson(
-      `https://restcountries.eu/rest/v2/name/${c3}`
-    ); */
+    // const [data1] = await getJson(
+    //   `https://restcountries.eu/rest/v2/name/${c1}`
+    // );
+    // const [data2] = await getJson(
+    //   `https://restcountries.eu/rest/v2/name/${c2}`
+    // );
+    // const [data3] = await getJson(
+    //   `https://restcountries.eu/rest/v2/name/${c3}`
+    // );
     const data = await Promise.all([
       getJson(`https://restcountries.eu/rest/v2/name/${c1}`),
       getJson(`https://restcountries.eu/rest/v2/name/${c2}`),
@@ -404,5 +404,34 @@ const get3Countrys = async function (c1, c2, c3) {
   } catch (err) {
     console.error(err);
   }
+}; */
+// get3Countrys('portugal', 'canada', 'mexico');
+/* (async function () {
+  const res = await Promise.race([
+    getJson(`https://restcountries.eu/rest/v2/name/mexico`),
+    getJson(`https://restcountries.eu/rest/v2/name/portugal`),
+    getJson(`https://restcountries.eu/rest/v2/name/egypt`),
+  ]);
+  console.log(res[0]);
+})(); */
+
+const timeout = function (sec) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('Request took too long!'));
+    }, sec * 1000);
+  });
 };
-get3Countrys('portugal', 'canada', 'mexico');
+
+Promise.race([
+  getJson(`https://restcountries.eu/rest/v2/name/mexico`),
+  timeout(0.5),
+])
+  .then(res => console.log(res[0]))
+  .catch(err => console.error(err));
+
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('ERROR'),
+  Promise.resolve('Another succes'),
+]).then(res => console.log(res));
