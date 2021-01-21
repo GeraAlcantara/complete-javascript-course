@@ -10,6 +10,7 @@ export const state = {
     page: 1,
     resultsPerPage: RES_PER_PAGE,
   },
+  bookmark: [],
 };
 
 export const loadRecipe = async function (id) {
@@ -35,7 +36,7 @@ export const loadRecipe = async function (id) {
 export const loadSearchResults = async function (query) {
   try {
     state.search.query = query;
-    state.search.page = 1;
+
     const data = await getJSON(`${API_URL}?search=${query}`);
 
     state.search.results = data.data.recipes.map(rec => {
@@ -46,6 +47,7 @@ export const loadSearchResults = async function (query) {
         image: rec.image_url,
       };
     });
+    state.search.page = 1;
   } catch (err) {
     console.error(`${err} 💥💥💥💥`);
     throw err;
@@ -66,3 +68,5 @@ export const updateServings = function (newServings) {
   });
   state.recipe.servings = newServings;
 };
+
+export const addBookmark = function () {};
