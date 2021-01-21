@@ -14,6 +14,7 @@ export default class View {
   }
   update(data) {
     this._data = data;
+
     const newMarkup = this._generateMarkup();
 
     const newDom = document.createRange().createContextualFragment(newMarkup);
@@ -23,10 +24,11 @@ export default class View {
 
     newElement.forEach((newEl, i) => {
       const curEl = currElements[i];
+
       // updates changes TEXT
       if (
         !newEl.isEqualNode(curEl) &&
-        newEl.firstChild.nodeValue.trim() !== ''
+        newEl.firstChild?.nodeValue.trim() !== ''
       ) {
         curEl.textContent = newEl.textContent;
       }
