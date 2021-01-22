@@ -5,6 +5,7 @@ class addRecipeView extends View {
   constructor(data) {
     super(data);
     this._parentElement = document.querySelector('.upload');
+    this._message = 'Recipe was succesfully upload 🥰';
     this._window = document.querySelector('.add-recipe-window');
     this._overlay = document.querySelector('.overlay');
     this._btnOpen = document.querySelector('.nav__btn--add-recipe');
