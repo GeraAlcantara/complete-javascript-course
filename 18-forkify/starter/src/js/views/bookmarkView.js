@@ -11,6 +11,9 @@ class BookmarkView extends View {
       'No bookmarks yet. Find a nice recipe and bookmark it 😉 ';
     this._message = '';
   }
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler);
+  }
   _generateMarkup() {
     return `
     ${this._data
